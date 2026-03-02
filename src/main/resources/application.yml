@@ -1,14 +1,17 @@
 spring:
   application:
     name: gateway
-  cloud:
-    gateway:
-      mvc:
-        routes:
-          - id: microservice
-            uri: http://localhost:8081
-            predicates:
-              - Path=/microservice/**
-
+#  cloud:
+#    gateway:
+#      mvc:
+#        routes:
+#          - id: microservice
+#            uri: http://localhost:8081/users
+#            predicates:
+#              - Path=/microservice/**
+  datasource:
+    url: jdbc:postgresql://localhost:5432/security
+    username: postgres
+    password: root
 server:
   port: 8080
